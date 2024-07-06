@@ -12,7 +12,7 @@ RUN useradd -ms /bin/bash planetcrafter
 USER planetcrafter
 
 # Set working directory
-WORKDIR /home/planetcrafter/PlanetCrafter
+WORKDIR /home/planetcrafter
 
 # Copy entrypoint script
 COPY entrypoint.sh /home/planetcrafter/entrypoint.sh

@@ -1,5 +1,15 @@
 #!/bin/bash
 
+# Setup Wine prefix and directories
+export WINEPREFIX=/home/planetcrafter/.wine
+export WINEARCH=win32
+
+# Ensure the directory structure for the game saves
+mkdir -p $WINEPREFIX/drive_c/users/planetcrafter/AppData/LocalLow/MijuGames/Planet\ Crafter
+
+# Link the save directory
+ln -s /home/planetcrafter/PlanetCrafter/saves $WINEPREFIX/drive_c/users/planetcrafter/AppData/LocalLow/MijuGames/Planet\ Crafter
+
 # Navigate to the game directory
 cd /home/planetcrafter/PlanetCrafter
 
