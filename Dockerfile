@@ -13,14 +13,12 @@ RUN useradd -ms /bin/bash planetcrafter
 # Set working directory
 WORKDIR /home/planetcrafter
 
-# Copy entrypoint script
+# Copy entrypoint script as root
 COPY entrypoint.sh /home/planetcrafter/entrypoint.sh
 
-# Change the ownership of the entrypoint script
-RUN chown planetcrafter:planetcrafter /home/planetcrafter/entrypoint.sh
-
-# Make the entrypoint script executable
-RUN chmod +x /home/planetcrafter/entrypoint.sh
+# Change the ownership and permissions of the entrypoint script
+RUN chown planetcrafter:planetcrafter /home/planetcrafter/entrypoint.sh && \
+    chmod +x /home/planetcrafter/entrypoint.sh
 
 # Switch to non-root user
 USER planetcrafter

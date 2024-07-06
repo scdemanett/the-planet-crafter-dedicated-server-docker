@@ -2,7 +2,7 @@
 
 # Setup Wine prefix and directories
 export WINEPREFIX=/home/planetcrafter/.wine
-export WINEARCH=win32
+export WINEARCH=win64
 
 # Ensure the directory structure for the game saves
 mkdir -p $WINEPREFIX/drive_c/users/planetcrafter/AppData/LocalLow/MijuGames/Planet\ Crafter
@@ -14,4 +14,4 @@ ln -s /home/planetcrafter/PlanetCrafter/saves $WINEPREFIX/drive_c/users/planetcr
 cd /home/planetcrafter/PlanetCrafter
 
 # Run the game using Wine in headless mode
-wine "Planet Crafter.exe" -batchmode -nographics
+wine64 "Planet Crafter.exe" -batchmode -nographics
