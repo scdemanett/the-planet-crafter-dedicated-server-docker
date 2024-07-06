@@ -3,7 +3,7 @@ FROM ubuntu:20.04
 # Install necessary packages and Wine
 RUN dpkg --add-architecture i386 && \
     apt-get update && \
-    apt-get install -y software-properties-common wget unzip && \
+    apt-get install -y software-properties-common wget unzip xvfb && \
     apt-get install -y wine64 wine32 libwine libmono-cil-dev winetricks && \
     rm -rf /var/lib/apt/lists/*
 

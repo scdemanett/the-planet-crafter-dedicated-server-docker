@@ -13,5 +13,5 @@ ln -s /home/planetcrafter/PlanetCrafter/saves $WINEPREFIX/drive_c/users/planetcr
 # Navigate to the game directory
 cd /home/planetcrafter/PlanetCrafter
 
-# Run the game using Wine in headless mode
-wine64 "Planet Crafter.exe" -batchmode -nographics
+# Run the game using Wine in headless mode with xvfb
+xvfb-run -a wine64 "Planet Crafter.exe" -batchmode -nographics
