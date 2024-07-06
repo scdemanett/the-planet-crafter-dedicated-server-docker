@@ -23,7 +23,6 @@ WORKDIR /home/planetcrafter
 
 # Copy entrypoint script
 COPY entrypoint.sh /home/planetcrafter/entrypoint.sh
-RUN chmod +x /home/planetcrafter/entrypoint.sh
 
 # Command to run the entrypoint script
-CMD ["./entrypoint.sh"]
+CMD ["bash", "/home/planetcrafter/entrypoint.sh"]
