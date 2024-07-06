@@ -4,6 +4,12 @@
 export WINEPREFIX=/home/planetcrafter/.wine
 export WINEARCH=win64
 
+# Initialize the Wine prefix
+wine64 wineboot
+
+# Install necessary components using winetricks
+winetricks -q corefonts vcrun2017
+
 # Ensure the directory structure for the game saves
 mkdir -p $WINEPREFIX/drive_c/users/planetcrafter/AppData/LocalLow/MijuGames/Planet\ Crafter
 
