@@ -4,8 +4,6 @@ FROM ubuntu:20.04
 RUN dpkg --add-architecture i386 && \
     apt-get update && \
     apt-get install -y software-properties-common wget unzip && \
-    add-apt-repository ppa:glennric/dxvk && \
-    apt-get update && \
     apt-get install -y wine64 wine32 libwine libmono-cil-dev winetricks && \
     rm -rf /var/lib/apt/lists/*
 
