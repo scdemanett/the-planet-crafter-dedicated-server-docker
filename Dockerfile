@@ -9,14 +9,21 @@ RUN dpkg --add-architecture i386 && \
 
 # Add non-root user
 RUN useradd -ms /bin/bash planetcrafter
-USER planetcrafter
 
 # Set working directory
 WORKDIR /home/planetcrafter
 
 # Copy entrypoint script
 COPY entrypoint.sh /home/planetcrafter/entrypoint.sh
+
+# Change the ownership of the entrypoint script
+RUN chown planetcrafter:planetcrafter /home/planetcrafter/entrypoint.sh
+
+# Make the entrypoint script executable
 RUN chmod +x /home/planetcrafter/entrypoint.sh
+
+# Switch to non-root user
+USER planetcrafter
 
 # Command to run the entrypoint script
 CMD ["bash", "/home/planetcrafter/entrypoint.sh"]
