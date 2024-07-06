@@ -20,6 +20,9 @@ COPY entrypoint.sh /home/planetcrafter/entrypoint.sh
 RUN chown planetcrafter:planetcrafter /home/planetcrafter/entrypoint.sh && \
     chmod +x /home/planetcrafter/entrypoint.sh
 
+# Expose port 7777
+EXPOSE 7777
+
 # Switch to non-root user
 USER planetcrafter
 
