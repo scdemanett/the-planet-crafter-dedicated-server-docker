@@ -14,7 +14,7 @@ winetricks -q corefonts vcrun2017
 mkdir -p $WINEPREFIX/drive_c/users/planetcrafter/AppData/LocalLow/MijuGames/Planet\ Crafter
 
 # Link the save directory
-ln -s /home/planetcrafter/PlanetCrafter/saves $WINEPREFIX/drive_c/users/planetcrafter/AppData/LocalLow/MijuGames/Planet\ Crafter
+ln -s /home/planetcrafter/saves $WINEPREFIX/drive_c/users/planetcrafter/AppData/LocalLow/MijuGames/Planet\ Crafter
 
 # Navigate to the game directory
 cd /home/planetcrafter/PlanetCrafter
